@@ -20,7 +20,7 @@ function LandingPage() {
 
     useEffect(() => {
         let cursor = true;
-        let speed = 250;
+        let speed = 750;
         setInterval(() => {
             if(cursor) {
                 document.getElementById('cursor').style.opacity = 0;
@@ -35,9 +35,6 @@ function LandingPage() {
     const classes = useStyles();
     const HeaderArray1 = "Open-Source".split('');
     const HeaderArray2 = "Pioneer".split('');
-
-    const HeaderArray = [...HeaderArray1, '_', ...HeaderArray2]
-
     return (
         <LandingContainer id="home">
             <BackgroundSection>

@@ -7,7 +7,7 @@ export const LandingContainer = styled.div`
     transition : all 0.4s ease-in-out;
     display : flex;
     justify-content : center;
-    height: 800px;
+    height: 900px;
     z-index : 1;
     position : relative;
     align-items : center;
@@ -48,18 +48,18 @@ export const LandingSection = styled.div`
 
 export const Header1 = styled.h1`
     color : #ffff;
-    font-size : 50px;
+    font-size : 45px;
     text-align : center;
     font-family: 'Mitr', sans-serif;
     transition : all 0.4s ease-in-out;
     align-items: start;
     
     @media screen and (max-width : 760px){
-        font-size : 40px;
+        font-size : 35px;
         
     } 
     @media screen and (max-width: 460px){
-        font-size : 32px;
+        font-size : 27px;
         
     } 
     
@@ -67,7 +67,7 @@ export const Header1 = styled.h1`
 
 export const Header2 = styled.h1`
     color : #ffff;
-    font-size : 47px;
+    font-size : 52px;
     font-family: 'Mitr', sans-serif;
     transition : all 0.4s ease-in-out;
     display: flex;
@@ -77,12 +77,12 @@ export const Header2 = styled.h1`
     
     
     @media screen and (max-width : 760px){
-        font-size : 35px;
+        font-size : 38px;
         transition : all 0.4s ease-in-out;
         
     } 
     @media screen and (max-width: 460px){
-        font-size : 25px;
+        font-size : 28px;
         flex-wrap: wrap;
         transition : all 0.4s ease-in-out;
     } 
@@ -104,9 +104,9 @@ export const TextArea = styled.p`
 
 `
 
-export const Cursor = styled.div`
+export const Cursor = styled.span`
 
-      background: #ccc;
+      background: linear-gradient(45deg, #00d2ff,#3a7bd5) repeat;
       line-height: 17px;
       
       -webkit-animation: 1s blink step-end infinite;

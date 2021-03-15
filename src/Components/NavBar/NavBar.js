@@ -16,6 +16,7 @@ import WelcomeCard from "../WelcomeCards/WelcomeCard";
 import Radium from "radium";
 import MenuIcon from "@material-ui/icons/Menu";
 import {StyledListItemText,CustomListItem} from "./StylesNavBarComponents";
+import MyProfile from "../../Screens/Profile/MyProfile";
 
 const drawerWidth = 240;
 
@@ -61,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
     },
     drawerOpen: {
         width: drawerWidth,
-        background : 'linear-gradient(#24243e,#000000) repeat',
+        background : '#1d1d1d',
         transition: theme.transitions.create('width', {
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.enteringScreen,
@@ -85,7 +86,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     toolbar: {
-
+        height : '6.5rem',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-end',
@@ -145,8 +146,8 @@ function NavBar() {
                 </svg>
                 <svg width="0" height="0">
                     <linearGradient id="Darcula" x1="100%" y1="100%" x2="0%" y2="0%">
-                        <stop stopColor="#dc2424" offset="0%" />
-                        <stop stopColor="#4a569d" offset="100%" />
+                        <stop stopColor="#5c258d" offset="0%" />
+                        <stop stopColor="#4389a2" offset="100%" />
                     </linearGradient>
                 </svg>
                 <div className={classes.toolbar}>
@@ -160,11 +161,11 @@ function NavBar() {
                             [classes.hide]: open,
                         })}
                     >
-                        <MenuIcon style={{ stroke: "url(#blue-gradient)", }}/>
+                        <MenuIcon className={classes.iconstyle}/>
                     </IconButton>:
                     <IconButton onClick={handleDrawerClose}>
-                        {theme.direction === 'rtl' ? <ChevronRightIcon style={{ stroke: "url(#blue-gradient)" }}/> :
-                            <ChevronLeftIcon style={{ stroke: "url(#blue-gradient)" }} />}
+                        {theme.direction === 'rtl' ? <ChevronRightIcon className={classes.iconstyle}/> :
+                            <ChevronLeftIcon className={classes.iconstyle} />}
                     </IconButton> }
                 </div>
                 <Divider/>
@@ -188,6 +189,7 @@ function NavBar() {
 
             </Drawer>
             <main className={classes.content}>
+                {/*<MyProfile/>*/}
                 <LandingPage/>
                 <WelcomeCard/>
             </main>
